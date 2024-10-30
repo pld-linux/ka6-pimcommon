@@ -49,10 +49,10 @@ BuildRequires:	kf6-kitemmodels-devel >= %{kframever}
 BuildRequires:	kf6-kjobwidgets-devel >= %{kframever}
 BuildRequires:	kf6-knewstuff-devel >= %{kframever}
 BuildRequires:	kf6-kservice-devel >= %{kframever}
+BuildRequires:	kf6-ktextaddons-devel
 BuildRequires:	kf6-kwidgetsaddons-devel >= %{kframever}
 BuildRequires:	kf6-kxmlgui-devel >= %{kframever}
 BuildRequires:	kf6-purpose-devel >= %{kframever}
-BuildRequires:	ktextaddons-devel
 BuildRequires:	libxslt-progs
 BuildRequires:	ninja
 BuildRequires:	qt6-build >= %{qtver}
