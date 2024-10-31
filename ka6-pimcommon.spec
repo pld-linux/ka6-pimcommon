@@ -32,6 +32,7 @@ BuildRequires:	Qt6Xml-devel >= %{qt_ver}
 BuildRequires:	cmake >= 3.20
 BuildRequires:	gettext-tools
 BuildRequires:	ka6-akonadi-contacts-devel >= %{ka_ver}
+BuildRequires:	ka6-akonadi-search-devel >= %{ka_ver}
 BuildRequires:	ka6-akonadi-devel >= %{ka_ver}
 BuildRequires:	ka6-kimap-devel >= %{ka_ver}
 BuildRequires:	ka6-kldap-devel >= %{ka_ver}
@@ -68,6 +69,7 @@ Requires:	Qt6Gui >= %{qt_ver}
 Requires:	Qt6Network >= %{qt_ver}
 Requires:	Qt6Widgets >= %{qt_ver}
 Requires:	ka6-akonadi-contacts >= %{ka_ver}
+Requires:	ka6-akonadi-search >= %{ka_ver}
 Requires:	ka6-akonadi >= %{ka_ver}
 Requires:	ka6-kimap >= %{ka_ver}
 Requires:	ka6-kldap >= %{ka_ver}
