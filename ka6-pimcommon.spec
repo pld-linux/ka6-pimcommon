@@ -2,7 +2,7 @@
 # Conditional build:
 %bcond_with	tests	# test suite
 
-%define		kdeappsver	%{version}
+%define		kdeappsver	24.08.3
 # packages version, not cmake config version (which is 6.2.2)
 %define		ka_ver		%{version}
 %define		kf_ver		6.3.0
@@ -11,12 +11,12 @@
 Summary:	Common PIM libraries
 Summary(pl.UTF-8):	Wspólne biblioteki PIM
 Name:		ka6-%{kaname}
-Version:	24.08.2
-Release:	4
+Version:	24.08.3
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	56afaecf4985cde86874464c2d302d91
+# Source0-md5:	f4d0c9be67144a71da7f87c5bc4f812c
 URL:		https://kde.org/
 BuildRequires:	Qt6Core-devel >= %{qt_ver}
 BuildRequires:	Qt6DBus-devel >= %{qt_ver}
