@@ -2,7 +2,7 @@
 # Conditional build:
 %bcond_with	tests	# test suite
 
-%define		kdeappsver	24.08.3
+%define		kdeappsver	24.12.0
 # packages version, not cmake config version (which is 6.2.2)
 %define		ka_ver		%{version}
 %define		kf_ver		6.3.0
@@ -11,12 +11,12 @@
 Summary:	Common PIM libraries
 Summary(pl.UTF-8):	Wspólne biblioteki PIM
 Name:		ka6-%{kaname}
-Version:	24.08.3
+Version:	24.12.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	f4d0c9be67144a71da7f87c5bc4f812c
+# Source0-md5:	b064db1f4ce476e5221e2dba8c7cbefc
 URL:		https://kde.org/
 BuildRequires:	Qt6Core-devel >= %{qt_ver}
 BuildRequires:	Qt6DBus-devel >= %{qt_ver}
@@ -32,8 +32,8 @@ BuildRequires:	Qt6Xml-devel >= %{qt_ver}
 BuildRequires:	cmake >= 3.20
 BuildRequires:	gettext-tools
 BuildRequires:	ka6-akonadi-contacts-devel >= %{ka_ver}
-BuildRequires:	ka6-akonadi-search-devel >= %{ka_ver}
 BuildRequires:	ka6-akonadi-devel >= %{ka_ver}
+BuildRequires:	ka6-akonadi-search-devel >= %{ka_ver}
 BuildRequires:	ka6-kimap-devel >= %{ka_ver}
 BuildRequires:	ka6-kldap-devel >= %{ka_ver}
 BuildRequires:	ka6-libkdepim-devel >= %{ka_ver}
@@ -68,9 +68,9 @@ Requires:	Qt6DBus >= %{qt_ver}
 Requires:	Qt6Gui >= %{qt_ver}
 Requires:	Qt6Network >= %{qt_ver}
 Requires:	Qt6Widgets >= %{qt_ver}
+Requires:	ka6-akonadi >= %{ka_ver}
 Requires:	ka6-akonadi-contacts >= %{ka_ver}
 Requires:	ka6-akonadi-search >= %{ka_ver}
-Requires:	ka6-akonadi >= %{ka_ver}
 Requires:	ka6-kimap >= %{ka_ver}
 Requires:	ka6-kldap >= %{ka_ver}
 Requires:	ka6-libkdepim >= %{ka_ver}
@@ -151,6 +151,8 @@ rm -rf $RPM_BUILD_ROOT
 %ghost %{_libdir}/libKPim6PimCommon.so.6
 %attr(755,root,root) %{_libdir}/libKPim6PimCommonAkonadi.so.*.*.*
 %ghost %{_libdir}/libKPim6PimCommonAkonadi.so.6
+%ghost %{_libdir}/libKPim6PimCommonActivities.so.6
+%attr(755,root,root) %{_libdir}/libKPim6PimCommonActivities.so.*.*.*
 %attr(755,root,root) %{_libdir}/qt6/plugins/designer/pimcommon6akonadiwidgets.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/designer/pimcommon6widgets.so
 %{_datadir}/qlogging-categories6/pimcommon.categories
@@ -160,7 +162,10 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_libdir}/libKPim6PimCommon.so
 %{_libdir}/libKPim6PimCommonAkonadi.so
+%{_libdir}/libKPim6PimCommonActivities.so
 %{_includedir}/KPim6/PimCommon
 %{_includedir}/KPim6/PimCommonAkonadi
+%{_includedir}/KPim6/PimCommonActivities
 %{_libdir}/cmake/KPim6PimCommon
 %{_libdir}/cmake/KPim6PimCommonAkonadi
+%{_libdir}/cmake/KPim6PimCommonActivities
