@@ -2,7 +2,7 @@
 # Conditional build:
 %bcond_with	tests	# test suite
 
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 # packages version, not cmake config version (which is 6.2.2)
 %define		ka_ver		%{version}
 %define		kf_ver		6.3.0
@@ -11,12 +11,12 @@
 Summary:	Common PIM libraries
 Summary(pl.UTF-8):	Wspólne biblioteki PIM
 Name:		ka6-%{kaname}
-Version:	25.08.2
-Release:	3
+Version:	25.08.3
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	7dac9159bb2450dd803d42b0192f752c
+# Source0-md5:	9807419a07c571375e2fa72b117872f1
 URL:		https://kde.org/
 BuildRequires:	Qt6Core-devel >= %{qt_ver}
 BuildRequires:	Qt6DBus-devel >= %{qt_ver}
@@ -148,14 +148,14 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f libpimcommon6.lang
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libKPim6PimCommon.so.*.*.*
+%{_libdir}/libKPim6PimCommon.so.*.*.*
 %ghost %{_libdir}/libKPim6PimCommon.so.6
-%attr(755,root,root) %{_libdir}/libKPim6PimCommonAkonadi.so.*.*.*
+%{_libdir}/libKPim6PimCommonAkonadi.so.*.*.*
 %ghost %{_libdir}/libKPim6PimCommonAkonadi.so.6
 %ghost %{_libdir}/libKPim6PimCommonActivities.so.6
-%attr(755,root,root) %{_libdir}/libKPim6PimCommonActivities.so.*.*.*
-%attr(755,root,root) %{_libdir}/qt6/plugins/designer/pimcommon6akonadiwidgets.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/designer/pimcommon6widgets.so
+%{_libdir}/libKPim6PimCommonActivities.so.*.*.*
+%{_libdir}/qt6/plugins/designer/pimcommon6akonadiwidgets.so
+%{_libdir}/qt6/plugins/designer/pimcommon6widgets.so
 %{_datadir}/qlogging-categories6/pimcommon.categories
 %{_datadir}/qlogging-categories6/pimcommon.renamecategories
 
