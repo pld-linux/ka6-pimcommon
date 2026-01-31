@@ -12,7 +12,7 @@ Summary:	Common PIM libraries
 Summary(pl.UTF-8):	Wspólne biblioteki PIM
 Name:		ka6-%{kaname}
 Version:	25.12.1
-Release:	2
+Release:	3
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
@@ -56,6 +56,7 @@ BuildRequires:	kf6-ktextwidgets-devel >= %{kf_ver}
 BuildRequires:	kf6-kwidgetsaddons-devel >= %{kf_ver}
 BuildRequires:	kf6-kxmlgui-devel >= %{kf_ver}
 BuildRequires:	kf6-purpose-devel >= %{kf_ver}
+BuildRequires:	kp6-plasma-activities-devel
 BuildRequires:	libxslt-progs
 BuildRequires:	ninja
 BuildRequires:	qt6-build >= %{qt_ver}
