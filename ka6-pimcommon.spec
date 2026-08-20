@@ -2,7 +2,7 @@
 # Conditional build:
 %bcond_with	tests	# test suite
 
-%define		kdeappsver	26.04.3
+%define		kdeappsver	26.08.0
 # packages version, not cmake config version (which is 6.2.2)
 %define		ka_ver		%{version}
 %define		kf_ver		6.3.0
@@ -11,12 +11,12 @@
 Summary:	Common PIM libraries
 Summary(pl.UTF-8):	Wspólne biblioteki PIM
 Name:		ka6-%{kaname}
-Version:	26.04.3
-Release:	2
+Version:	26.08.0
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	3cf3e3ddc737cf305f13a55d6e478d00
+# Source0-md5:	41b94e12fd02d803af4d9405cfb35813
 URL:		https://kde.org/
 BuildRequires:	Qt6Core-devel >= %{qt_ver}
 BuildRequires:	Qt6DBus-devel >= %{qt_ver}
@@ -51,7 +51,7 @@ BuildRequires:	kf6-kitemmodels-devel >= %{kf_ver}
 BuildRequires:	kf6-kjobwidgets-devel >= %{kf_ver}
 BuildRequires:	kf6-knewstuff-devel >= %{kf_ver}
 BuildRequires:	kf6-kservice-devel >= %{kf_ver}
-BuildRequires:	kf6-ktextaddons-devel >= 1.5.4
+BuildRequires:	kf6-ktextaddons-devel >= 2.1.2
 BuildRequires:	kf6-ktextwidgets-devel >= %{kf_ver}
 BuildRequires:	kf6-kwidgetsaddons-devel >= %{kf_ver}
 BuildRequires:	kf6-kxmlgui-devel >= %{kf_ver}
@@ -85,7 +85,7 @@ Requires:	kf6-ki18n >= %{kf_ver}
 Requires:	kf6-kio >= %{kf_ver}
 Requires:	kf6-kitemmodels >= %{kf_ver}
 Requires:	kf6-knewstuff >= %{kf_ver}
-Requires:	kf6-ktextaddons >= 1.5.4
+Requires:	kf6-ktextaddons >= 2.1.2
 Requires:	kf6-kwidgetsaddons >= %{kf_ver}
 Requires:	kf6-kxmlgui >= %{kf_ver}
 Requires:	kf6-purpose >= %{kf_ver}
@@ -109,7 +109,7 @@ Requires:	Qt6Gui-devel >= %{qt_ver}
 Requires:	Qt6Widgets-devel >= %{qt_ver}
 Requires:	kf6-kconfig-devel >= %{kf_ver}
 Requires:	kf6-kio-devel >= %{kf_ver}
-Requires:	kf6-ktextaddons-devel >= 1.5.4
+Requires:	kf6-ktextaddons-devel >= 2.1.2
 Obsoletes:	ka5-pimcommon-devel < 24
 
 %description devel
