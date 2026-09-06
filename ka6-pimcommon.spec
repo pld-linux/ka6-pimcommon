@@ -5,14 +5,14 @@
 %define		kdeappsver	26.08.0
 # packages version, not cmake config version (which is 6.2.2)
 %define		ka_ver		%{version}
-%define		kf_ver		6.3.0
-%define		qt_ver		6.6.0
+%define		kf_ver		6.25.0
+%define		qt_ver		6.9.0
 %define		kaname		pimcommon
 Summary:	Common PIM libraries
 Summary(pl.UTF-8):	Wspólne biblioteki PIM
 Name:		ka6-%{kaname}
 Version:	26.08.0
-Release:	1
+Release:	2
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
@@ -20,7 +20,6 @@ Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kan
 URL:		https://kde.org/
 BuildRequires:	Qt6Core-devel >= %{qt_ver}
 BuildRequires:	Qt6DBus-devel >= %{qt_ver}
-BuildRequires:	Qt6Designer-devel >= %{qt_ver}
 BuildRequires:	Qt6Gui-devel >= %{qt_ver}
 BuildRequires:	Qt6Network-devel >= %{qt_ver}
 %if %{with tests}
@@ -29,18 +28,19 @@ BuildRequires:	Qt6Test-devel >= %{qt_ver}
 BuildRequires:	Qt6UiTools-devel >= %{qt_ver}
 BuildRequires:	Qt6Widgets-devel >= %{qt_ver}
 BuildRequires:	Qt6Xml-devel >= %{qt_ver}
-BuildRequires:	cmake >= 3.20
+BuildRequires:	cmake >= 3.29
 BuildRequires:	gettext-tools
-BuildRequires:	ka6-akonadi-contacts-devel >= %{ka_ver}
-BuildRequires:	ka6-akonadi-devel >= %{ka_ver}
-BuildRequires:	ka6-akonadi-search-devel >= %{ka_ver}
-BuildRequires:	ka6-kimap-devel >= %{ka_ver}
-BuildRequires:	ka6-kldap-devel >= %{ka_ver}
-BuildRequires:	ka6-libkdepim-devel >= %{ka_ver}
+BuildRequires:	ka6-akonadi-contacts-devel >= 6.8.0
+BuildRequires:	ka6-akonadi-devel >= 6.8.0
+BuildRequires:	ka6-akonadi-search-devel >= 6.8.0
+BuildRequires:	ka6-kimap-devel >= 6.8.0
+BuildRequires:	ka6-kldap-devel >= 6.8.0
+BuildRequires:	ka6-libkdepim-devel >= 6.8.0
 BuildRequires:	kf6-extra-cmake-modules >= %{kf_ver}
 BuildRequires:	kf6-karchive-devel >= %{kf_ver}
 BuildRequires:	kf6-kcmutils-devel >= %{kf_ver}
 BuildRequires:	kf6-kcodecs-devel >= %{kf_ver}
+BuildRequires:	kf6-kcolorscheme-devel >= %{kf_ver}
 BuildRequires:	kf6-kcompletion-devel >= %{kf_ver}
 BuildRequires:	kf6-kconfig-devel >= %{kf_ver}
 BuildRequires:	kf6-kcontacts-devel >= %{kf_ver}
@@ -51,13 +51,11 @@ BuildRequires:	kf6-kitemmodels-devel >= %{kf_ver}
 BuildRequires:	kf6-kjobwidgets-devel >= %{kf_ver}
 BuildRequires:	kf6-knewstuff-devel >= %{kf_ver}
 BuildRequires:	kf6-kservice-devel >= %{kf_ver}
-BuildRequires:	kf6-ktextaddons-devel >= 2.1.2
-BuildRequires:	kf6-ktextwidgets-devel >= %{kf_ver}
+BuildRequires:	kf6-ktextaddons-devel >= 2.0.2
 BuildRequires:	kf6-kwidgetsaddons-devel >= %{kf_ver}
 BuildRequires:	kf6-kxmlgui-devel >= %{kf_ver}
 BuildRequires:	kf6-purpose-devel >= %{kf_ver}
-BuildRequires:	kp6-plasma-activities-devel
-BuildRequires:	libxslt-progs
+BuildRequires:	kp6-plasma-activities-devel >= 6.4.0
 BuildRequires:	ninja
 BuildRequires:	qt6-build >= %{qt_ver}
 BuildRequires:	rpmbuild(macros) >= 1.736
